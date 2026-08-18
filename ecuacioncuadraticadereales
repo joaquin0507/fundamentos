@@ -1,0 +1,21 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    int x , y , z ;
+    float x1,x2;
+    
+    cout<<"\ningresar dato a: ";
+    cin>>x;
+    cout<<"\ningresar dato b: ";
+    cin>>y;
+    cout<<"\ningresar dato c: ";
+    cin>>z;
+    x1=(-y+sqrt((y*y)-4*x*z))/(2*x);
+    x2=(-y-sqrt((y*y)-4*x*z))/(2*x);
+    cout<<"\nx1 es: ";cout<<x1;
+    cout<<"\nx2 es: ";cout<<x2;
+
+    return 0;
+}
