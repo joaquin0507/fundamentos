@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a,b,c;
+    float d;
+    cout<<"introducir tres valores del 0 al d10: "<<endl;
+    cout<<"introducir valor a: ";
+    cin>>a;
+    cout<<"\nintroducir valor b: ";
+    cin>>b;
+    cout<<"\nintroducir valor c: ";
+    cin>>c;
+    if((a<=10)&&(a>=0)){
+     if((b<=10)&&(b>=0)){
+         if((c<=10)&&(c>=0)){
+             d=(a+b+c)/3.0;
+             cout<<"el promedio es:"<<d;
+         }else{
+             cout<<"el valor c se encuentra fuera de rango";
+         }
+     }else{
+         cout<<"el valor b se encuentra fuera de rango";
+     }
+    }else{
+        cout<<"el valor a se encuentra fuera de rango";
+    }
+    return 0;
+}
