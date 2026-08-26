@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+int main()
+{
+    int r;
+    float p,a,pi;
+    cout<<"introduzca el area del circulo: ";
+    cin>>r;
+    pi=3.141592;
+    a=pi*r*r;
+    p=pi*r*2;
+    cout<<"\nel area es: "<<a<<"\nel perimetro es: "<<p;
+    return 0;
+}
