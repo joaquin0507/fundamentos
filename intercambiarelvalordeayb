@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+int main()
+{
+  float a,b,i;
+  cout<<"introduzca valos de a: ";
+  cin>>a;
+  cout<<"introduzca valor de b: ";
+  cin>>b;
+  i=a;
+  a=b;
+  b=i;
+  cout<<"valor de a: "<<a<<"\nvalor de b: "<<b;
+    return 0;
+}
