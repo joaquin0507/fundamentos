@@ -1,0 +1,29 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main()
+{
+    int x , y , z ,d;
+    float x1,x2;
+    
+    cout<<"\ningresar dato a: ";
+    cin>>x;
+    cout<<"\ningresar dato b: ";
+    cin>>y;
+    cout<<"\ningresar dato c: ";
+    cin>>z;
+    d=y*y-4*x*z;
+    if(d>=0){
+      x1=(-y+sqrt((y*y)-4*x*z))/(2*x);
+      x2=(-y-sqrt((y*y)-4*x*z))/(2*x);
+      cout<<"\nx1 es: ";cout<<x1;
+      cout<<"\nx2 es: ";cout<<x2;
+    }else{
+      x1=y/(2*x);
+      x2=sqrt(-d)/(2*x);
+      cout<<"el valor de x1 es: "<<x1<<"+"<<x2<<"i"<<endl;
+      cout<<"el valor de x2 es: "<<x1<<"+"<<x2<<"i"<<endl;
+    }
+
+    return 0;
+}
