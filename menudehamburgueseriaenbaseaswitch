@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float b,c;
+    int a;
+    
+    cout<<"            menu";
+    cout<<"\n1.-hamburguesa...............3bs";
+    cout<<"\n2.-hamburguesa con queso.....5bs";
+    cout<<"\n3.-papas fritas...........2,50bs";
+    cout<<"\n4.-soda......................3bs";
+    cout<<"\n0.-salir";
+
+ 
+ 
+   
+    cout<<"\ningrese el numero del producto que desea comprar:";
+    cin >>a;
+    cout<<"\ningrese la cantidad que desea comprar:";
+    cin >>b;
+    switch (a){
+        case 1:
+         c=b*3;
+         break;
+        case 2:
+         c=b*5;
+         break;
+        case 3:
+         c=b*2.5;
+         break;
+        case 4:
+         c=b*3;
+         break;
+        case 0:
+         cout <<"salir";
+        default:
+         cout<<"opcion invalida";
+    }
+    cout<<"el total de la compra es: "<<c<<" bs";
+    return 0;
+}
