@@ -1,0 +1,46 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a,b,r;
+    int c;
+	cout<<"ingrese los valores";
+	cout<<"\na= ";
+	cin>>a;
+	cout<<"\nb= ";
+	cin>>b;
+	cout<<"\n       menu";
+	cout<<"\n      1.-suma";
+	cout<<"\n      2.-resta";
+	cout<<"\n      3.-producto";
+	cout<<"\n      4.-division";
+	cout<<"\n      0.-salir";
+	cout<<"\n  elija la operacion:"<<endl;
+    cin>>c;
+    if (c<0 ||c>4){
+        cout<<"opcion invalida";
+    }else{
+       switch (c) {
+         case 1:
+             r=a+b;
+             break;
+         case 2:
+             r=a-b;
+             break;
+         case 3:
+             r=a*b;
+             break;
+         case 4:
+             r=a/b;
+             break;
+         case 0:
+             cout <<"salir";
+        }  
+    }
+    cout<<"\nel resultado es: "<<r;
+
+	return 0;
+}
