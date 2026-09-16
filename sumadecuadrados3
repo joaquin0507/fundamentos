@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int cont, a, suma=0;
+    cout<<"ingrese el limite de cuadrados: ";
+    cin >> a;
+   for (cont=1; cont<=a;cont++)
+       
+       suma=suma+cont*cont;
+    cout <<"\nla suma es: "  <<suma;
+
+    return 0;
+}
