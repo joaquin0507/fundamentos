@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    
+    
+    int n,i,mayor,menor,promedio,cont;
+    float suma;
+    cout<<"ingresa el numero de veces a repetir: ";
+    cin >> n;
+    cout<<"ingrese un numero: ";
+    cin>>i;
+    mayor=i;
+    menor=i;
+    suma=i;
+    cont=2;
+    while(cont<=n){
+        cout<<"ingrese otro numero: ";
+        cin>>i;
+        
+        if(mayor<=i){
+            mayor=i;
+        }else{
+            menor=i;
+        }
+        suma=suma+i;
+        cont=cont+ 1;
+    }
+    promedio=suma/n;
+    cout<<"la suma es: "<<suma;
+    cout<<"\nel promedio es: "<<promedio;
+    std::cout << "\nel numero mayor es: " <<mayor;
+
+    return 0;
+}
