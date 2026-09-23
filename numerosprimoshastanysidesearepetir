@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,s,x,y,z;
+    cout<<"ingresa los numeros que desea: "<<endl;
+    cin >> a;
+    c=2;
+    b=2;
+    y=1;
+    z=a;
+    while(s!=0){
+        while(y<=a){
+            x=b%c;
+            if((c==b)&&(x==0)){
+                cout<<b<<", ";
+                c=2;
+                b=b+ 1;
+                y=y+ 1;
+            }else if((c!=b)&&(x==0)){
+                b=b+ 1;
+                c=2;
+            }else{
+                c=c+ 1;   
+            }
+        }
+        if (y==a)
+            cout<<"\ndesea repetir la accion?";
+            cout<<"\n1.-repetir";
+            cout<<"\n0.-detener"<<endl;
+            cin>>s;
+            if(s!=0)
+                a=a+z;
+        
+    }
+    
+    return 0;
+}
