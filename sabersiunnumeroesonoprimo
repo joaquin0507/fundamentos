@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,x;
+    cout<<"ingresa el numero: "<<endl;
+    cin >> a;
+    c=2;
+    while(c<a){
+        x=a%c;
+        if(x==0)
+            b=1;
+        c=c+ 1;
+    }
+    if(b==1){
+        cout<<"el numero no es primo";
+    }else{
+        cout<<"el numero es primo";
+    }
+    
+    return 0;
+}
