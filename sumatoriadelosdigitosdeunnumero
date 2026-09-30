@@ -1,0 +1,22 @@
+include <iostream>
+using namespace std;
+int main()
+{
+    int Num, resp, D, Suma = 0;
+    do {
+        
+        do {
+            cout<<"Ingrese el número: ";
+            cin>>Num;
+        }while (Num < 0);
+        while (Num != 0){
+            D = Num%10;
+            Suma = Suma+D;
+            Num = Num/10;
+        }
+        cout<<"\nLa suma es: "<<Suma;
+        cout<<"\nDesea continuar? (1=Si | 0=No) ";
+        cin>>resp;
+    }while (resp != 0);
+    return 0;
+}
