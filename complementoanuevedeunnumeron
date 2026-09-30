@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+    int a,b,c,x;
+    cout<<"introducir el numero: ";
+    cin>>a;
+    b=0;
+    x=a;
+    while(x!=0){
+        x=x/10;
+        b=b+ 1;
+    }
+    c=pow(10, b)- 1-a;
+    cout<<"el complemento es: "<<c;
+
+    return 0;
+}
