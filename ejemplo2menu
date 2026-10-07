@@ -1,0 +1,91 @@
+// factorial.cpp : Defines the entry point for the console application.
+//
+
+
+#include <iostream>
+
+#include "stdlib.h"
+#include "Math.h"
+
+using namespace std;
+
+//prototipo
+int elmenor(int a, int b);
+int signo(float a);
+int elevar(int n, int m);
+void main()
+{
+	float b, a;
+	int x, y;
+	int opcion;
+	// Menu
+	do {
+		//Desplegar las opciones
+		cout << "\t\t Menu \n";
+		cout << "\t\t ==== \n";
+		cout << "1. el menor de 2 numeros\n";
+		cout << "2. signo\n";
+		cout << "3. elevacion\n";
+		cout << "0. Salir\n";
+		cout << "Opcion: ";
+		cin >> opcion;
+		// Condicional multiple
+		switch (opcion)
+		{
+		case 1:
+			cout <<"ingrse el primer numero";
+			cin >> x;
+			cout << "ingrese el primer numero";
+			cin >> y;
+			cout << "el numero menor es: " << elmenor(x, y);
+			break;
+		case 2:
+			cout << "ingresa el numero: ";
+			cin >> b;
+			cout << "el signo es: " << signo(b);
+			break;
+		case 3: 
+			cout << "ingrese el primer numero: ";
+			cin >> x;
+			cout << "ingrse el segundo numero: ";
+			cin >> y;
+			cout << "la potencia es: " << elevar(x, y);
+			break;
+		case 0: cout << "salir del menu";
+			break;
+		default: cout << "ERROR opcion invalida";
+			break;
+		}
+		
+		system("cls");
+	} while (opcion != 0);
+
+
+}
+
+int elmenor(int a, int b)
+{
+	if (a < b)
+		return a;
+	else
+		return b;
+}
+int signo(float a)
+{
+	if (a == 0)
+		return 0;
+	else
+		if (a < 0)
+			return -1;
+		else
+			return 1;
+
+}
+int elevar(int n, int m)
+{
+	int acum = 1, i;
+	for (i = 1; i <= m;i++) {
+		acum = acum * n;
+	}
+	return acum;
+}
