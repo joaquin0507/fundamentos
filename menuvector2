@@ -1,0 +1,97 @@
+#include <iostream>
+#define MAX 100
+using namespace std;
+void cargar(int a[], int tam);
+void mostrar(int a[], int tam);
+
+void mv(int a[], int mayor);
+void burbuja(int a[], int tam);
+int main()
+{
+    int opcion,n,v[MAX];
+    do 
+    {
+        cout << "\nmenu" << endl;
+        cout << "1.-cargar" << endl;
+        cout << "2.-mostrar" << endl;
+        cout << "3.-clasificar" << endl;
+        cout << "4.-mayor valor" << endl;
+        cout << "0.-salir" <<endl;
+        cout << "elija una opcion:"<<endl;
+        cin >> opcion;
+        switch (opcion) 
+        {
+            case 1:
+
+                do {
+                    cout << "cuantos elementos quiere";
+                    cin >> n;
+                } while (n > MAX  || n < 0);
+                cargar(v, n);
+                break;
+            case 2:
+                mostrar(v, n);
+                break;
+            case 3:
+                burbuja(v, n);
+                break;
+            case 4:
+                mv(v, n);
+                break;
+            case 0:
+                cout << "saliendo...";
+                break;
+            default:
+                cout << "error";
+        }
+
+
+    } while (opcion != 0);
+
+        return 0;
+}
+
+void cargar(int a[], int tam) 
+{
+    for (int i = 0; i < tam; i++) {
+        cout << "v[" << i << "]=";
+        cin >> a[i];
+    }
+
+
+
+
+}
+void mostrar(int a[], int tam) 
+{
+    for (int i = 0; i < tam; i++) {
+        cout << "v[" << i << "]=";
+        cout << a[i] << endl;
+    }
+
+}
+void burbuja(int a[], int tam) 
+{
+    for (int i = 0; i < tam; i++) {
+        for (int j = 0; j < tam; j++) {
+            if (a[i] < a[j]) {
+                int aux;
+                aux = a[i];
+                a[i] = a[j];
+                a[j] = aux;
+            }
+        }
+    }
+
+}
+
+void mv(int a[], int mayor)
+{
+     for (int i = 0; i < mayor; i++)
+     {
+            if (a[i] > mayor)
+                mayor = a[i];
+     }
+     cout<<mayor;
+    
+}
